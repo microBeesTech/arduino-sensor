@@ -57,7 +57,7 @@ void loop(){
     Serial.println(gateBeeIP);
     client.connect("temperature") ;
    }
-   if (client.connected()  && millis()-lastUpdate>5000) {
+   if (client.connected()  && millis()-lastUpdate>30000) {
       lastUpdate=millis();
       Serial.println("CONNECTED TO gateBee");
       String json = buildJson();
